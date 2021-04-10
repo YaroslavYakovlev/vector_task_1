@@ -22,8 +22,12 @@ int main(){
       vec.erase(pos);
     }
   }
-  for(int i = 0; i < vec.size(); i++){
-    std::cout << vec[i] << " ";
+  if(!vec.empty()){
+    for(int i = 0; i < vec.size(); i++){
+      std::cout << vec[i] << " ";
+    }
+  }else {
+    std::cout << "Vector is empty" << std::endl;  
   }
   return 0;
 }
