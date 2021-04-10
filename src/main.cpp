@@ -16,10 +16,11 @@ int main(){
   }
   std::cout << "Enter deleted element" << std::endl;  
   std::cin >> del;
-  for(int i = 0; i < n; i++){
+  for(int i = 0; i < vec.size(); i++){
     if(vec[i] == del){
       std::vector<int>::iterator pos = vec.begin() + i;
       vec.erase(pos);
+      i--;
     }
   }
   if(!vec.empty()){
